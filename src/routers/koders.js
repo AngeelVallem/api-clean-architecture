@@ -66,6 +66,22 @@ router.delete('/:id', async (req,res) => {
 	}
 })
 
+router.patch('/:id',  async (req,res) =>{
+	try{
+			console.log(req.params)
+ 			await koders.updateById(req.params,req.body)
+		re.json({
+			succes : true,
+			message : 'koder updated'
+		})
+	}
+	catch(err){
+		res.json({
+			message : err.message
+		})
+	}
+})
+
 module.exports = router
 
 

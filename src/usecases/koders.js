@@ -12,10 +12,15 @@ function postKoder(koder){
 
 function deleteKoder(id){
 	return Koders.findByIdAndDelete(id)
+} 
+
+function updateById(id , update){
+	return Koders.findByIdAndUpdate(id,update)
 }
 
 module.exports = {
 	getAll,
 	postKoder,
-	deleteKoder
+	deleteKoder,
+	updateById
 }
