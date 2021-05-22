@@ -26,7 +26,7 @@ const mentorsSchema = new mongoose.Schema({
      },
     modules : {
         type: String,
-        enum : ['maquetado', 'BackEnd', 'React', 'javascript'],
+        enum : [ 'front', 'back', 'cloud', 'react' ], 
         require : true
     }
 })
