@@ -8,7 +8,8 @@ const  app = express()
 
 
 app.use(express.json())
-app.use('/koders',reqLogs,kodersRouter)
-app.use('/mentors',reqLogs, mentorsRouter)
+app.use(reqLogs)
+app.use('/koders',kodersRouter)
+app.use('/mentors',mentorsRouter)
 
 module.exports = app
