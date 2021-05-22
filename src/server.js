@@ -2,12 +2,13 @@
 const express = require('express')
 const kodersRouter = require('./routers/koders') 
 const mentorsRouter = require('./routers/mentors')
-
+const reqLogs = require('./middlewares/reqLogs')
 const  app = express()
 
 
+
 app.use(express.json())
-app.use('/koders', kodersRouter)
-app.use('/mentors', mentorsRouter)
+app.use('/koders',reqLogs,kodersRouter)
+app.use('/mentors',reqLogs, mentorsRouter)
 
 module.exports = app
